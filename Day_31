@@ -1,0 +1,30 @@
+def longest_word(li:list):
+    li1=[]
+    for item in li:
+        li1.append([len(item),item])
+    return max(li1)
+print(longest_word(['java','javascript','python']))
+
+def create_user():
+    d={}
+    name=input("please enter name: ")
+    age=input("please enter age: ")
+    password=input("please enter password: ")
+
+    d.update({"name": name})
+    d.update({"age":age})
+    d.update({"password":password})
+
+    print("User saved.Please login")
+    print ("user please enter login")
+    
+    user_name=input("Please enter login username: ")
+    password1=input("Please enter login password: ")
+
+    while True:
+        if user_name==d.get('name') and password1==d.get('password'):
+            return "Access granted! welcome back  "
+        else:
+            return "Access denied please try again"
+
+print(create_user())

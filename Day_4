@@ -1,0 +1,17 @@
+def only_floats(a,b):
+    if type(a)==float and type(b) == float:
+        return 2
+    elif type(a) ==float or type(b) == float:
+        return 1
+    else:
+        return 0
+def word_index(li:list):
+    for item in li:
+        if all(len(item)==len(li[0]) for item in li):
+            return 0
+    longest=max(li,key=len)
+    return longest
+
+print(only_floats(12.1,23))
+words=["Hate","Remorse","Vengenace"]
+print(word_index(words))

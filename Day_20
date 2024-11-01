@@ -1,0 +1,22 @@
+import string
+def capitalize(a:str):
+    upper=[]
+    for i,word in enumerate(a.split()):
+        if word[0].islower():
+            upper.append(word.capitalize())
+        else:
+            upper.append(word)
+    return ''.join(upper)
+
+print(capitalize('I like learning'))
+
+str1= 'leArning is hard, but if you apply yourself'\
+       'you can achieVe success'
+
+upper_names=[]
+for words in str1.split():
+    for letter in word:
+        if letter in string.ascii_uppercase:
+            upper_names.append("".join(word[::-1]))
+print(upper_names)
+

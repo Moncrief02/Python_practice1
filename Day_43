@@ -1,0 +1,18 @@
+import string 
+def get_marks():
+    dict1= {}
+    while True:
+        try:
+            name=input("Plase enter student name or done when finished: ")
+            for letter in name:
+                if letter in string.punctuation or letter in string.digits:
+                    raise NameError("Please enter a valid name: ")
+            if name== "done":
+                break
+            marks= int (input("Enter the marks: "))
+            dict1[name]=dict1.get(marks,0)+marks
+        except(NameError, ValueError) as e:
+            print(f'Error: {e}')
+
+print(get_marks())
+            

@@ -1,0 +1,19 @@
+def my_discount():
+    price=int(input("please enter price: "))
+    discount=int(input("state discount: "))
+    total=price*(100-discount)/100
+    print(total)
+    return total
+def enrollment(li:list):
+    males=0
+    females=0
+    for item in li:
+        if item == "males" or item=="Males":
+            males +=1
+        elif item =="females" or item =="Females":
+            females+=1
+    students=[(males),(females)]
+    return students
+student_list=["males","females","Males","Females","males","females","Males","Females","males","Males","males"]
+# my_discount()
+print(enrollment(student_list))

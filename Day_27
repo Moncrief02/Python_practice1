@@ -1,0 +1,23 @@
+from csv import list_dialects
+
+
+def unique_numbers(li:list):
+    original_sum=sum(li)
+    unique=set(li)
+    unique_sum=sum(unique)
+    total=original_sum-unique_sum
+    print(li)
+    print(unique)
+    if total %2==0:
+        return li
+    else:
+        return unique
+
+li=[1,2,3,4,5,6,7,8,8]
+# print(unique_numbers(li))
+
+
+def difference(a:list,b:list):
+    [i for i in a if i not in b]
+    [j for j in b if j not in a]
+    return f'difference: {a+b}'

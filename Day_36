@@ -1,0 +1,26 @@
+def count(word:str):
+    d={}
+    for i in range(len(word)):
+        x= word[i]
+        count=0
+        for j in range(i,len(word)):
+            if word[j] == word[i]:
+                count=count+1
+        countz= dict({x:count})
+        if x not in d.keys():
+            d.update(countz)
+    return d
+print(count('hello'))
+
+def sun_nested_dictionary(dictionary:dict):
+    total_sum=0
+    for value in dictionary.values():
+        if isinstance(value,dict):
+            total_sum +=sun_nested_dictionary(value)
+        else:
+            total_sum +=value
+    return total_sum
+
+nested_dict={'a':1,'b':{'c':2,'d':{'e':3, 'f':4}}, 'g':5}
+sum_of_values= sun_nested_dictionary(nested_dict)
+print(" Sum of all values: " ,sum_of_values)

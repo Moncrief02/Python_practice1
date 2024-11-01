@@ -1,0 +1,45 @@
+from audioop import add
+from cgitb import text
+import math
+
+
+import operator
+import string
+def calculator():
+    try:
+        num1=int(input("please enter first number "))
+        opt= input("please enter operator")
+        num2= int(input("please enter second number "))
+
+        if opt not in ['+','-','*','-'] or len(opt)>1:
+            print("please enter valid operator")
+    except ValueError:
+        print("please enter a valid number")
+    except ZeroDivisionError:
+        print("Cant divide by 0")
+    else:
+        if opt=='+':
+         return operator.add(num1,num2)
+        elif opt=='-':
+              return operator.sub(num1,num2)
+        elif opt=='*':
+            return operator.mul(num1,num2)
+        elif opt=='/':
+            return operator.truediv(num1,num2)
+    return 'Try again'
+
+# print(calculator())
+
+def muliply_words(s:string):
+    li=[]
+    text=s.split()
+    for word in text:
+        if word.isupper():
+            pass
+        else:
+            li.append(len(word))
+        prod=math.prod(li)
+    return(prod)
+    print(text)
+
+print(muliply_words("love,live and laugh"))

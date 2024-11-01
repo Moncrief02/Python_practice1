@@ -1,0 +1,24 @@
+import string
+
+
+def sort_words(s:string):
+    list1=[]
+    s=s.replace(" ","")
+    for i in s:
+        if i not in list1:
+            list1.append(i)
+    list1.sort()
+    sorted=[','.join(list1)]
+    return sorted
+print(sort_words('love life'))
+
+def string_lengths(s:str)->dict:
+    list1=[]
+    dict1={}
+    for word in s.split():
+        list1.append(word)
+    for word in list1:
+        dict1.update({word:len(word)})
+    return dict1
+s="hi my name is richard"
+print(string_lengths(s))

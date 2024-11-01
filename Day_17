@@ -1,0 +1,18 @@
+import random
+
+num= random.randint(0,10)
+def username():
+    name= input("please insert name ")
+    name=name[::-1]
+    username=name +str(num)
+    return username
+print(username())
+
+def sort_length(arr:list):
+    for item in range(len(arr)):
+        for j in range(len(arr)-1):
+            if len(arr[j])> len(arr[j+1]):
+                arr[j],arr[j+1]=arr[j+1],arr[j]
+    return arr
+names=["Peter","Jon","Andrew"]
+print(sort_length(names))

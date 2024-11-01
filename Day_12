@@ -1,0 +1,22 @@
+from datetime import datetime
+def count_dots(word):
+    m=word.split(".")
+    return f' the string has {len(m)-1} dots'
+print(count_dots('h.e.l.p.'))
+
+def age_in_minutes():
+    while True:
+        DOB=input("Please enter your birth year")
+        if len(DOB) !=4:
+            print("Error DOB is invalid please retry need 4 characters")
+        elif int(DOB) <1900 or int(DOB) >2024:
+            print("Error DOB is invalid please retry ")
+        else:
+            now1=int(datetime.now().strftime("%Y"))
+            age=(now1-int(DOB))*525600
+            return f' you are {age:,} minutes old'
+
+print(age_in_minutes())
+
+        
+

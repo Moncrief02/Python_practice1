@@ -1,0 +1,27 @@
+import string
+
+
+def same_in_reverse(word:string):
+    rev= word[::-1]
+    if rev==word:
+        return True
+    else:
+        return False
+print(same_in_reverse("MAD"))
+def your_age():
+    name=input("Please enter name: ")
+    names_age={
+        "jane":23,
+        "kerry":45,
+        "tim":34,
+        "peter":27
+    }
+    for key in names_age.keys():
+        if key == name:
+         return f'Hello {name} your current age is {names_age.get(key)}'
+    else: 
+        while name not in names_age.keys():
+            age= input("your name is not in the dictionary. Please enter your current age: ").lower()
+            names_age.update({name:age})
+            return f'Hello {name} your current age is {names_age.get(name)}'
+print(your_age())

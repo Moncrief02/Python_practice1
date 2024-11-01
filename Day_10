@@ -1,0 +1,13 @@
+def your_password():
+    password1=input('Please input password: ')
+    password=len(password1)* '*'
+    return f'password is {password}'\
+           f'and {len(password)} characters long'
+print(your_password)
+def convert_numbers(n):
+    new_list =[]
+    for num in n:
+        new_list.append("{:,}".format(num))
+    return new_list
+
+print(convert_numbers([100000, 2356989, 2355672, 9878098]))

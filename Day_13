@@ -1,0 +1,27 @@
+from emoji import emojize
+
+def your_vat():
+    while True:
+        try:
+            price=int(input("Please enter price"))
+            vat=int(input("please enter discount"))
+            if price>0 and vat >0:
+                total_price=price +\
+                    (price * vat /100+1)-1
+                return f'price VAT inclusive is' , total_price
+            else:
+                print("PLease enter non-negative number")
+        except ValueError:
+            print("please enter a valid number")
+
+
+def python_snakes(n:int):
+    for i in range(0,n):
+        for j in range(n,i,-1):
+            print(end=" ")
+            for k in range(0,i+1):
+                print(emojize(':snake:'),end="   ")
+            print("\n")    
+
+python_snakes(7)
+

@@ -1,0 +1,16 @@
+def any_num(*args):
+    ave=sum(args)/len(args)
+    return f' The average is {ave}'
+print(any_num(12,90))
+
+def add_reverse(n:list,k:list):
+    new_list=[]
+    if len(n)== len(k):
+        for i in range(0,len(n)):
+            new_list.append((n[i]+k[i]))
+            new_list.reverse()
+        return new_list
+    else:
+        return f'List have different lengths'
+list1=[10,12,34]
+list2=[12,56,78]

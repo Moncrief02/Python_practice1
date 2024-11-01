@@ -1,0 +1,18 @@
+import string
+
+
+def all_the_same(data:str or list or tuple):
+    if isinstance(data, (str,list,tuple) ):
+        check_lists=all(i==data[0]for i in data)
+        return check_lists
+    else:
+        raise TypeError("input must be string,tuple or lists")
+print(all_the_same(['Mary',"Mary","Mary"]))
+
+def read_backwards(s:string):
+    x=[]
+    text=s.split()
+    for word in text[::-1]:
+        x.append(word)
+    return ' '.join(x)
+print(read_backwards("the love is real"))

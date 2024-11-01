@@ -1,0 +1,30 @@
+def odd_even(li:list):
+    even=[]
+    odd=[]
+    for item  in li:
+        if item%2==0:
+            even.append(item)
+        else:
+            odd.append(item)
+    highest=max(even)
+    lowest=min(odd)
+    total=highest-lowest
+    return total
+
+numbers=[1,2,4,6]
+print(odd_even(numbers))
+def prime_numbers():
+    prime=[]
+    num=int(input("Please enter number"))
+    for i in range(0,num+1):
+        if i>1:
+            for j in range(2,i):
+                if i %j==0:
+                    break
+                else:
+                    prime.append(i)
+    return prime
+print(prime_numbers())
+
+
+

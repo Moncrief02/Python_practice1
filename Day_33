@@ -1,0 +1,34 @@
+import timeit
+def inter_section(a,b):
+    inter_list=[num for num in a if num in b]
+    first_num=inter_list[-1]
+    last_num= inter_list[0]
+    inter_list[0]=first_num
+    inter_list[-1]=last_num
+    return tuple(inter_list)
+li1=[20,30,60,65,75,80,85]
+li2=[42,30,80,65,68,88,95]
+
+print(inter_section(li1,li2))
+
+def set_or_list():
+    set_test='''
+    a=range(10000000)
+    b=set(a)
+    i=999999
+    i in b
+    '''
+    set_search_time=timeit.timeit(stmt=set_test,number=1000)
+    list_test='''
+    a=range(10000000)
+    b=list(a)
+    i=999999
+    i in b
+    '''
+    list_search_time=timeit.timeit(stmt=list_test,number=1000)
+
+    print("Set Search Time:",set_search_time)
+    print("Set Search Time:",list_search_time)
+
+
+print(set_or_list())

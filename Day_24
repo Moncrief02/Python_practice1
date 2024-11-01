@@ -1,0 +1,23 @@
+def average_calories():
+    scores=[]
+    while True:
+        score=input("please enter a score or done when quit: ")
+        if score== "done":
+            break
+        scores.append(int(score))
+    return f' Average score {sum(scores)/len(scores)}'
+# print(average_calories())
+
+def nested_lists(*args:list):
+    for lst in args:
+        if type(lst) != list:
+            return "invalid arguments . please check"
+    list1=[]
+    for i in range(len(args)):
+        for j in args:
+            list1.append(j)
+        break
+    return list1
+
+print(nested_lists([1,2,3.4],[4,7,8,9],[8,0,8,6]))
+

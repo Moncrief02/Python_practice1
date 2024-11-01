@@ -1,0 +1,18 @@
+from itertools import count
+
+
+def string_range(number:int):
+    x=[str(num)for num in range(number)]
+    x=".".join(x)
+    return x
+# print(string_range(6))
+def dictionary_names(li:list):
+    d={}
+    for name in li:
+        if name.startswith('S'):
+            d.update({name:li.count(name)})
+    print(d),
+
+names=["Jospeh","Nathan","Sasha","Kelly",
+"muhammed","Jabulani","Sera","Patel","Sera"]
+dictionary_names(names)

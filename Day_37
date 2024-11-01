@@ -1,0 +1,23 @@
+from itertools import count
+
+
+def count_the_vowels(str1:str):
+    volume=[]
+    if type(str1)!= str:
+        return "Invalid Input"
+    for letter in str1:
+        if letter in "AEIOUaeiou":
+            if letter not in volume:
+                volume.append(letter)
+    if volume:
+        return len(volume)
+    else:
+        return"The string has no vowels"
+
+print(count_the_vowels("yes"))
+print(count_the_vowels("vs"))
+
+
+
+
+

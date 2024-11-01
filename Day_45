@@ -1,0 +1,29 @@
+import string 
+
+def analyze_string(my_str):
+    special_cha=[]
+    numeric_cha=[]
+    results_dict={
+        'unique_numeric': '',
+        'unique_special_cha': '',
+        'total_char': ''
+
+    }
+
+    for character in my_str.replace(' ',''):
+        if character not in special_cha:
+            special_cha.append(character)
+        results_dict['unique_special_cha']=len(special_cha)
+        if character in string.digits:
+            if character not in numeric_cha:
+                numeric_cha.append(character)
+            results_dict['unique_numeric']=len(numeric_cha)
+        else:
+            results_dict['total_char']=len(my_str.replace(' ',''))
+    return results_dict
+
+print(analyze_string('python has a string format operator %'
+                     'this functions analogously to'
+                     'printf format in string in C, e.g.'
+                     '"spam=%s eggs=%d" %("blah",2)'
+                      'evaluates to "splam=blah eggs=2?' ))

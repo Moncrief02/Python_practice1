@@ -1,0 +1,15 @@
+def save_emails():
+    while True:
+        email=input ("Enter your  email or done when finished: ")
+        if email == 'done':
+            break
+        with open('emails.csv','a')as f:
+            f.write (email)
+            f.write ('/n')
+save_emails()
+
+def open_emails():
+    with open('emails.csv','a')as f:
+        return f.read()
+    
+print(open_emails())

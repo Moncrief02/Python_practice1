@@ -1,0 +1,27 @@
+from itertools import count
+
+
+def convert_add(li):
+    list=[]
+    for item  in li:
+        num=int(item)
+        list.append(num)
+    total=sum(list)
+    return total
+def check_duplicates(li2):
+    duplicates=[]
+    for item in li2:
+        if li2.count(item)>1:
+            if item not in duplicates:
+                duplicates.append(item)
+    if duplicates:
+        return duplicates
+    else:
+        return " No Duplicates"
+
+food= ["banana","apples","apples","orange","pineapple"]
+name=["john","chuck","adam","Joe"]
+test=["1","2","3"]
+print (convert_add(test))
+print(check_duplicates(food))
+print(name)

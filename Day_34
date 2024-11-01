@@ -1,0 +1,11 @@
+def just_digits():
+    with open('python.csv', 'r')as file:
+        open_file=file.read().split()
+        li=[]
+        for word in open_file:
+            if word.isdigit():
+                li.append(word)
+    return li
+
+print(just_digits())
+

@@ -1,0 +1,19 @@
+from collections import Counter
+name=["John","Peter","John","Peter","Jones","Peter"]
+def repeated_names(li:list):
+    return max((Counter(li).most_common(1)))
+
+print(repeated_names(name))
+
+celebs=["Beyonce Knowles","Alicia Keys", "Katy Perry","Chris Brown", "Tom Cruise"]
+
+def sorted_lasted(li:list):
+    list2=[]
+    for name in li:
+        list2.append(name.split())
+    list3=[]
+    x= lambda x: x[-1]
+    for name in sorted(list2, key=x):
+        list3.append(' '.join([name[-1],name[0]]))
+    return list3
+print(sorted_lasted(celebs))

@@ -1,0 +1,30 @@
+from itertools import count
+from tkinter.font import names
+
+
+def register_check(records:dict):
+    count=0
+    miss=0
+    for item in records.values():
+        
+        if item == "yes":
+            count +=1
+        else:
+            miss+=1
+    return f'the number of students here are:{count} & the number of students missing are {miss}'
+    
+students={"Joe":"yes",
+         "Adam":"No",
+          "Tom":"yes",
+          "John":"No",
+          "Bob":"yes"
+          }
+print(register_check(students))
+
+def lowercase_names():
+    d=[]
+    for name in sorted(names,reverse=True):
+        if names.islower():
+            d.append(names)
+            tuple_names=tuple(d)
+    print(tuple_names)

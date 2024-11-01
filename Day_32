@@ -1,0 +1,35 @@
+def password_validator():
+    errors=[]
+    while True:
+        password=input("Please enter password: ")
+        if not any(i.isupper()for i in password):
+            errors.append("please add at least one captial letter")
+        elif not any(i.islower()for i in password):
+            errors.append("please add at least one lower case letter")
+        elif not any(i.isdigit()for i in password):
+            errors.append("please add at least one number")
+        elif len(password)<8:
+            errors.append("password is les than 8 characters")
+        if len(errors)>0:
+            print('check the following errors:')
+            print(str(errors))
+            del errors[0:]
+        else:
+            return f'your password is: {password}'
+
+# print(password_validator())
+
+def email_validator(emails:list):
+    valid=[]
+    for email in emails:
+        if "@" in email and email.count('@')==1 and email[-4]=='.com':
+            if email[0] !=0:
+                valid.append(email)
+        elif len(valid)==0:
+            return f'All emails are invalid'
+    return f' These emails are valid'
+
+addresses= ['ben@mail.com','John@mail.com','Adam@mail.com','@@ben@mail.com']
+print(email_validator(addresses))
+
+

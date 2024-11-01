@@ -1,0 +1,19 @@
+def sum_list(li:list):
+    count=0
+    for item in li:
+        for i in item:
+            count +=i
+        return f' The sum is: ', count
+print(sum_list([[2,4,5,6],[2,3,5,6]]))
+
+nested=[[12,34,56,67],34,68,78]
+def unpack_a_nest(nested_list):
+    new_list=[]
+    for arr in nested_list:
+        for num in arr:
+            if num in [34,67,78]:
+                if num not in new_list:
+                    new_list.append(num)
+    print(new_list)
+
+unpack_a_nest(nested)

@@ -1,0 +1,12 @@
+def user_string():
+    email_address=(input("Please enter email_address "))
+    username=email_address.split('@')[0]
+    return username
+
+# print(user_string())
+def zeroed(arr:list):
+    arr[0]=0
+    arr[-1]=0
+    return arr
+li=[7,9,8,6]
+print(zeroed(li))

@@ -1,0 +1,26 @@
+from tokenize import Number
+
+
+def make_tuples(a,b):
+    if len(a) != len(b):
+        raise ValueError("our lists are not of equal length")
+    zipped_object=zip(a,b)
+    return list(tuple(zipped_object))
+print(make_tuples([1,2,3,4],[5,6,7,8]))
+def even_or_average():
+    avg_num=[]
+    even_num=[]
+    while True:
+        number=input("Please enters numbers or done")
+        avg_num.append(int(number))
+        if int(number) %2==0:
+            even_num.append(number)
+        if len(avg_num)==5:
+            break
+    if len(even_num)>0:
+        return f'The largerst number is {max(even_num)}'
+    else:
+        return f' the average of num is:  {sum(avg_num)/len(avg_num)}'
+
+print(even_or_average())
+
